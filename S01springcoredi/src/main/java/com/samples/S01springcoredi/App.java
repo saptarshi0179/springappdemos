@@ -1,13 +1,21 @@
 package com.samples.S01springcoredi;
 
-/**
- * Hello world!
- *
- */
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+       ClassPathXmlApplicationContext springContainer = new ClassPathXmlApplicationContext("com/samples/S01springcoredi/SpringConfig.xml");
+       
+//       Employee emp = (Employee) springContainer.getBean("emp"); 
+//     System.out.println(emp);
+
+//       Employee em1 = new Employee();
+//       em1.setId(10);
+//       em1.setName("x");
+       
+       Hospital hospital = (Hospital) springContainer.getBean("hospital");
+       System.out.println(hospital);
     }
 }
