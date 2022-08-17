@@ -8,7 +8,8 @@
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="emp" class="com.samples.S01springcoredi.Employee" p:id="28" p:name="Adam" />
+	<bean name="emp" class="com.samples.S01springcoredi.Employee"
+		p:id="28" p:name="Adam" />
 
 	<bean name="hospital" class="com.samples.S01springcoredi.Hospital">
 		<property name="name" value="Global Hospitals" />
@@ -30,10 +31,10 @@
 			</set>
 		</property>
 	</bean>
-	
-	
-	<bean name="customer"
-		class="com.samples.S01springcoredi.Customer" p:id="37">
+
+
+	<bean name="customer" class="com.samples.S01springcoredi.Customer"
+		p:id="37">
 		<property name="products">
 			<map>
 				<entry key="100" value="Laptop" />
@@ -44,10 +45,12 @@
 			</map>
 		</property>
 	</bean>
-	
-	<bean name="items" class="com.samples.S01springcoredi.Item" p:id="101" p:name="SmartPhone" p:price="15000" p:quantity="2" />
-	
-	<bean name="shoppingcart" class="com.samples.S01springcoredi.ShoppingCart" p:item-ref="items"/>
-	
+
+	<bean name="items" class="com.samples.S01springcoredi.Item"
+		p:id="101" p:name="SmartPhone" p:price="15000" p:quantity="2" />
+
+	<bean name="shoppingcart"
+		class="com.samples.S01springcoredi.ShoppingCart" p:item-ref="items" />
+
 
 </beans>	
