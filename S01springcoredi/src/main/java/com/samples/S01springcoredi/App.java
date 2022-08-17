@@ -6,6 +6,7 @@ public class App
 {
     public static void main( String[] args )
     {
+    	// Create spring container
        ClassPathXmlApplicationContext springContainer = new ClassPathXmlApplicationContext("com/samples/S01springcoredi/SpringConfig.xml");
        
 //       Employee emp = (Employee) springContainer.getBean("emp"); 
@@ -15,7 +16,10 @@ public class App
 //       em1.setId(10);
 //       em1.setName("x");
        
-       Hospital hospital = (Hospital) springContainer.getBean("hospital");
-       System.out.println(hospital);
+//       Hospital hospital = (Hospital) springContainer.getBean("hospital");
+//       System.out.println(hospital);
+       
+       ShoppingCart shopcart = (ShoppingCart) springContainer.getBean("shoppingcart");
+       System.out.println(shopcart);
     }
 }
